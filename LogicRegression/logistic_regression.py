@@ -123,7 +123,7 @@ fig, axes = plt.subplots(1, 3, sharey=True, figsize=(17, 5))
 
 #决策边界,分别看正则化系数lanbda取不同值得情况
 #lambda = 0, 不惩罚; lambda = 1, 正常惩罚; lambda = 100,正则化太激进
-
+#numpy.ravel()和numpy.flatten()都将多维数组降为一维。ravel返回的是原数组的试图(view),它的修改也会改变原数组; flatten返回拷贝
 for i, C in enumerate([0.0, 1.0, 100.0]):
     #最优化cost FunctionReg
     res2 = minimize(costFunctionReg, initial_theta, args=(C, XX, y), jac=gradientReg,options={'maxiter':3000})
