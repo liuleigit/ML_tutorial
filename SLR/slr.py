@@ -1,5 +1,6 @@
 #coding: utf-8
 #note : 简单线性回归。利用预测值与真实值差的平方作为评价函数,利用求导可以得到斜率和截距
+#http://blog.csdn.net/leiting_imecas/article/details/53000733
 import numpy as np
 def fitSLR(x, y):
     n = len(x)
