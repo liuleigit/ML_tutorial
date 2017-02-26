@@ -48,7 +48,7 @@ dummy_train_df = all_dummy_df.loc[train_df.index]
 dummy_test_df = all_dummy_df.loc[test_df.index]
 print dummy_train_df.shape, dummy_test_df.shape
 
-#------------------模型一, Ridge regression
+#------------------模型一, Ridge regression, 对于多因子的数据集，这种模型可以方便的把所有的var都无脑的放进去
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import cross_val_score
 X_train = dummy_train_df.values
